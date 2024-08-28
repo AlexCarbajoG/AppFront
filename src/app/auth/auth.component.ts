@@ -13,13 +13,13 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./auth.component.css']  // Asegúrate de usar 'styleUrls' en plural
 })
 export class AuthComponent {
-  codigo: string = '';
+  Usuario: string = '';
   password: string = '';
 
   constructor(private router: Router) {}
 
   onSubmit() {
-    if (this.codigo === 'sm46477810' && this.password === '10081990') {
+    if (this.Usuario === 'sm46477810' && this.password === '10081990') {
       this.router.navigate(['/home']);
     } else {
       alert('Credenciales incorrectas');

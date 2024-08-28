@@ -2,11 +2,12 @@ import { Component, OnInit  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [MatTableModule,HttpClientModule],
+  imports: [MatTableModule,HttpClientModule, MatCardModule],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css'
 })

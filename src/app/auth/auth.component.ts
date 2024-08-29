@@ -10,7 +10,7 @@ import { MatCardModule } from '@angular/material/card';
   standalone: true,
   imports: [FormsModule, MatInputModule, MatButtonModule, MatCardModule],
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']  // Asegúrate de usar 'styleUrls' en plural
+  styleUrls: ['./auth.component.css']
 })
 export class AuthComponent {
   Usuario: string = '';
@@ -18,11 +18,15 @@ export class AuthComponent {
 
   constructor(private router: Router) {}
 
-  onSubmit() {
-    if (this.Usuario === 'sm46477810' && this.password === '10081990') {
+  Ingreso() {
+    const validUsuario = 'sm46477810';
+    const validPassword = '10081990';
+
+    if (this.Usuario.toLowerCase() === validUsuario && this.password === validPassword) {
       this.router.navigate(['/home']);
     } else {
-      alert('Credenciales incorrectas');
+      alert('Usuario o contraseña Incorrecta');
     }
   }
+
 }
